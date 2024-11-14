@@ -54,12 +54,11 @@ Dynamic Programming Array (dp): Create an array dp of size k + 1 where dp[i] rep
 Initialization: Set dp[0] to 0, since achieving a sum of 0 is possible without using any elements from arr.
 
 DP Transition:
-
 For each i from 1 to k, check each element num in arr.
 If i >= num, update dp[i] to be the maximum of its current value and dp[i - num] + num.
 Final Answer: After populating dp, dp[k] will contain the maximum sum that can be achieved without exceeding k.
 
-##Code
+Code
 def unboundedKnapsack(k, arr):
     dp = [0] * (k + 1)
     
@@ -71,16 +70,6 @@ def unboundedKnapsack(k, arr):
     return dp[k]
 
 Time Complexity: 
-𝑂
-(
-𝑘
-×
-𝑛
-)
-O(k×n), where k is the target sum, and n is the size of arr.
+𝑂(𝑘×𝑛),where k is the target sum, and n is the size of arr.
 Space Complexity: 
-𝑂
-(
-𝑘
-)
-O(k), for the dp array.
+𝑂(𝑘) for the dp array.
